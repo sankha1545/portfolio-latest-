@@ -1,0 +1,23 @@
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+  gap: 0; /* Ensures no space between images */
+}
+
+.slider-image {
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  background-position: center;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevents images from shrinking */
+}

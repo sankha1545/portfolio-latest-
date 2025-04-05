@@ -1,0 +1,72 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Animate from Right
+    const animateFromRightElements = () => {
+        document.querySelectorAll("[data-animate-from-right]").forEach(el => {
+            if (el.children.length) {
+                gsap.set(el.children, { opacity: 0, x: 150 });
+                gsap.to(el.children, {
+                    opacity: 1, x: 0, duration: 0.8, ease: "back", stagger: 0.3,
+                    scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" }
+                });
+            }
+        });
+    };
+
+    // Animate from Left
+    const animateFromLeftElements = () => {
+        document.querySelectorAll("[data-animate-from-left]").forEach(el => {
+            if (el.children.length) {
+                gsap.set(el.children, { opacity: 0, x: -150 });
+                gsap.to(el.children, {
+                    opacity: 1, x: 0, duration: 0.8, ease: "back", stagger: 0.3,
+                    scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" }
+                });
+            }
+        });
+    };
+
+    // Animate Fade Up
+    const animateFadeUp = () => {
+        document.querySelectorAll("[data-ani-fade-up]").forEach(el => {
+            gsap.set(el, { autoAlpha: 0, y: 75 });
+            gsap.to(el, {
+                autoAlpha: 1, y: 0, duration: 2, ease: "expo.out",
+                scrollTrigger: { trigger: el, start: "top 85%" }
+            });
+        });
+    };
+
+    // Animate Fade Left
+    const animateFadeLeft = () => {
+        document.querySelectorAll("[data-ani-fade-left]").forEach(el => {
+            gsap.set(el, { autoAlpha: 0, x: -100 });
+            gsap.to(el, {
+                autoAlpha: 1, x: 0, duration: 1.5, ease: "power3.out",
+                scrollTrigger: { trigger: el, start: "top 85%" }
+            });
+        });
+    };
+
+    // Animate Fade Right
+    const animateFadeRight = () => {
+        document.querySelectorAll("[data-ani-fade-right]").forEach(el => {
+            gsap.set(el, { autoAlpha: 0, x: 100 });
+            gsap.to(el, {
+                autoAlpha: 1, x: 0, duration: 1.5, ease: "power3.out",
+                scrollTrigger: { trigger: el, start: "top 85%" }
+            });
+        });
+    };
+
+    // Run animations after a delay
+    setTimeout(() => {
+        animateFromRightElements();
+        animateFromLeftElements();
+        animateFadeUp();
+        animateFadeLeft();
+        animateFadeRight();
+    }, 250);
+
+    // Refresh ScrollTrigger on resize
+    window.addEventListener("resize", () => ScrollTrigger.refresh());
+});

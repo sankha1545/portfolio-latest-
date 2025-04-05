@@ -1,0 +1,70 @@
+.marquee-container {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, rgb(193, 182, 182), rgb(14, 14, 31));
+}
+
+.marquee-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #5a3e1b;
+  margin-bottom: 20px;
+}
+
+.span {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 30px;
+  animation: marquee-loop 10s linear infinite;
+}
+
+/* Styling for brand logos */
+.marquee-content img {
+  height: 80px;
+  margin: 0 20px;
+}
+
+/* Continuous Scrolling Animation */
+@keyframes marquee-loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Duplicating Content for Seamless Loop */
+.marquee-content::after {
+  content: "";
+  display: flex;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .marquee-content img {
+    height: 60px;
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-content img {
+    height: 50px;
+    margin: 0 10px;
+  }
+}

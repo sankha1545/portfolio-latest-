@@ -1,0 +1,23 @@
+.cursor {
+  position: fixed;
+  background: #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+}
+
+.cursor-follower {
+  position: fixed;
+  border: 3px solid #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  z-index: 9998;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: all 0.1s ease-out;
+}
