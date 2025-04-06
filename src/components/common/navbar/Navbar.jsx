@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Navbar.scss";
-import logo from "../../../assets/logo.png"
+import logo from "/src/assets/logo.png";
 
 const navItems = [
   // {
@@ -299,7 +299,7 @@ const Navbar = () => {
     <>
       <nav className={`navbar ${menuOpen ? "menu-open" : ""}`}>
         <div className="navbar__logo">
-          <img src={logo} alt="IBG Logo" style={{width:"200px"}} />
+          <img src={logo} alt=" Logo" style={{width:"200px"}} />
         </div>
         {/* <div className="navbar__title">
           <h1>
