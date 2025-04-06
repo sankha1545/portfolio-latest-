@@ -2,6 +2,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import carousel1 from "/src/assets/carousel1.png";
+import carousel2 from "/src/assets/carouse2.png";
+import carousel3 from "/src/assets/carousel3.png";
+import carousel4 from "/src/assets/carousel4.png";
+import carousel5 from "/src/assets/carousel5.png";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -99,7 +104,7 @@ const Participant = () => {
           <SwiperSlide>
             <div className="partint">
               <motion.img
-                src="/src/assets/carousel1.png"
+                src={carousel1}
                 className="partimg"
                 alt="Salvatore Calabrese"
                 variants={fadeLeftVariant}
@@ -132,7 +137,7 @@ const Participant = () => {
           <SwiperSlide>
             <div className="partint">
               <motion.img
-                src="/src/assets/carousel2.png"
+                src={carousel2}
                 className="partimg"
                 alt="Dré Masso"
                 variants={fadeLeftVariant}
@@ -168,7 +173,7 @@ const Participant = () => {
           <SwiperSlide>
             <div className="partint">
               <motion.img
-                src="/src/assets/carousel4.png"
+                src={carousel3}
                 className="partimg"
                 alt="Jared Brown & Anistatia Miller"
                 variants={fadeLeftVariant}
@@ -188,7 +193,7 @@ const Participant = () => {
                 </div>
                 <div className="dial2">
                   <img
-                    src="/participant/bluebub.svg"
+                    src={carousel4}
                     className="bluebub"
                     alt="Icon"
                   />
@@ -207,7 +212,7 @@ const Participant = () => {
           <SwiperSlide>
             <div className="partint">
               <motion.img
-                src="/src/assets/carousel5.png"
+                src={carousel4}
                 className="partimg"
                 alt="Rebecca Sturt"
                 variants={fadeLeftVariant}
@@ -244,7 +249,7 @@ const Participant = () => {
           <SwiperSlide>
             <div className="partint">
               <motion.img
-                src="/participant/5.jpg"
+                src={carousel5}
                 className="partimg"
                 alt="Hidetsugu Ueno"
                 variants={fadeLeftVariant}

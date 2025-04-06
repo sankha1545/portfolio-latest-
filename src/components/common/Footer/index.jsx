@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-
+import logo from '/src/assets/logo.png'
 
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-logo">
           <img
-            src="/src/assets/logo.png"
+            src={logo}
             className="footer-logo-img"
             style={{
               width: "300px",
