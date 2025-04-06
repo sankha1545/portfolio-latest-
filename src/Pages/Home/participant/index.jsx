@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import carousel1 from "/src/assets/carousel1.png";
-import carousel2 from "/src/assets/carouse2.png";
+import carousel2 from "/src/assets/carousel2.png";
 import carousel3 from "/src/assets/carousel3.png";
 import carousel4 from "/src/assets/carousel4.png";
 import carousel5 from "/src/assets/carousel5.png";
