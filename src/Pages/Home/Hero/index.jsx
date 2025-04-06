@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { motion } from "framer-motion";
-
+import profile from "/src/assets/profile.png" 
 const wordVariant = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -87,7 +87,7 @@ function Banner() {
       </div>
 
       <motion.img
-        src="/src/assets/profile.png"
+        src={profile}
         className="banimg"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
